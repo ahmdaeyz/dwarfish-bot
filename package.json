@@ -1,0 +1,21 @@
+{
+    "name": "dwarfish",
+    "version": "1.0.0",
+    "description": "A messenger bot that facilities shortening links from \"dwarfish.herokuapp.com\".",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "messenger",
+        "url_shortener",
+        "bot"
+    ],
+    "author": "ahmdaeyz",
+    "license": "ISC",
+    "dependencies": {
+        "bootbot": "^1.0.16",
+        "request": "^2.88.0",
+        "valid-url": "^1.0.9"
+    }
+}
