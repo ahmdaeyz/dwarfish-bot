@@ -69,4 +69,4 @@ bot.on("postback:INFO", (payload, chat) => {
         });
     });
 });
-bot.start(8080);
+bot.start(process.env.PORT || 8080);
