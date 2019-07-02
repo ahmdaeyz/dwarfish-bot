@@ -4,6 +4,7 @@
     "description": "A messenger bot that facilities shortening links from \"dwarfish.herokuapp.com\".",
     "main": "app.js",
     "scripts": {
+        "start": "node app",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
