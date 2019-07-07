@@ -1,0 +1,24 @@
+{
+    "name": "Dwarfish",
+    "description": "Messenger bot that acts as a front for a url shortener",
+    "keywords": [
+        "nodejs",
+        "messenger",
+        "bot"
+    ],
+    "repository": "https://github.com/ahmdaeyz/dwarfish-bot",
+    "env": {
+        "PAGE_ACCESS_TOKEN": {
+            "description": "Bot facebook page access token"
+        },
+        "VERIFY_TOKEN": {
+            "description": "Webhook verify token"
+        },
+        "APP_SECRET": {
+            "description": "Facebook bot app secret"
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Heroku shortening app name"
+        }
+    }
+}
