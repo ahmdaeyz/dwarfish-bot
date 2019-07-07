@@ -32,7 +32,8 @@ bot.on('postback:SHORTEN', (payload, chat) => {
                         convo.end();
                     }
                     const short = json["short_url"];
-                    conv.say("https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/s/" + short);
+                    const shortener = "https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/s/";
+                    conv.say(shortener + short);
                     convo.end();
                 });
             } else {
@@ -47,7 +48,8 @@ bot.on("postback:INFO", (payload, chat) => {
         convo.ask("Please send the link to be checked..", (payload, conv) => {
             const url = payload.message.text;
             if (validUrl.isUri(url) && url.includes("https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/s/")) {
-                req.get("https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/l/" + url.replace("https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/s/", ""), { encoding: "utf8" }, (err, res) => {
+                const shortener = "https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/l/";
+                req.get(+url.replace("https://+" + process.env["HEROKU_APP_NAME"] + ".herokuapp.com/s/", ""), { encoding: "utf8" }, (err, res) => {
                     if (err !== null) {
                         conv.say("Something Went Wrong Please Try Again");
                         convo.end();
