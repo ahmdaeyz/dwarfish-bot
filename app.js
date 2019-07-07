@@ -15,8 +15,8 @@ bot.setGreetingText('Shorten links at ' + process.env["HEROKU_APP_NAME"] + ".her
 bot.setGetStartedButton((payload, chat) => {
     chat.say("Let's shorten 'em all!");
 });
-
 bot.on('postback:SHORTEN', (payload, chat) => {
+    console.log(process.env["HEROKU_APP_NAME"])
     chat.conversation((convo) => {
         convo.ask("Please send the link to be shortened..", (payload, conv) => {
             const url = payload.message.text;
